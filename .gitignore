@@ -1,0 +1,72 @@
+# Build outputs
+bin/
+obj/
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Thunderstore release artifacts
+*.zip
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+*.nuget.props
+*.nuget.targets
+
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# MSBuild binary and structured log
+*.binlog
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Common Unity / RoR2 reference DLLs (already in bin/)
+# We don't commit these because they're huge and available via BepInEx/game install
+*.dll
+*.pdb
+*.xml
+
+# EXCEPT our own compiled mod DLL (if you want to commit it)
+!PlannedEvolution.dll
+
+# Dependencies file
+*.deps.json
+
+# Batch utility scripts (optional - uncomment if you don't want them tracked)
+# *.bat
