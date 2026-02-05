@@ -69,4 +69,4 @@ $RECYCLE.BIN/
 *.deps.json
 
 # Batch utility scripts (optional - uncomment if you don't want them tracked)
-# *.bat
+ *.bat
