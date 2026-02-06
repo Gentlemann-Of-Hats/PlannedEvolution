@@ -11,7 +11,7 @@ using System;
 
 namespace PlannedEvolution
 {
-    [BepInPlugin("com.FortressForce.PlannedEvolution", "Planned Evolution", "2.3.1")]
+    [BepInPlugin("com.FortressForce.PlannedEvolution", "Planned Evolution", "2.3.3")]
     public class PlannedEvolutionPlugin : BaseUnityPlugin
     {
         private ConfigEntry<bool>? ModEnabled;
@@ -93,13 +93,15 @@ namespace PlannedEvolution
                             }
                         }
                     }
-
-                    if (announcementItems.Count > 0)
+                    if (RunArtifactManager.instance.IsArtifactEnabled(ArtifactCatalog.FindArtifactDef("Evolution")))
                     {
-                        Chat.SendBroadcastChat(new Chat.SimpleChatMessage
+                        if (announcementItems.Count > 0)
                         {
-                            baseToken = $"[Planned Evolution] Stage {currentStageNum}: " + string.Join(", ", announcementItems)
-                        });
+                            Chat.SendBroadcastChat(new Chat.SimpleChatMessage
+                            {
+                                baseToken = $"[Planned Evolution] Stage {currentStageNum}: " + string.Join(", ", announcementItems)
+                            });
+                        }
                     }
                 }
             }
